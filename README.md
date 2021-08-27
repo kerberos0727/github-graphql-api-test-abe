@@ -1,4 +1,4 @@
-download or clone from master branch
-npm install
-npm run dev
-check localhost:3000
+1. download or clone from master branch
+2. npm install
+3. npm run dev
+4. check localhost:3000
