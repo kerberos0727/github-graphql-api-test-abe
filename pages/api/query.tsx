@@ -1,5 +1,4 @@
 import { gql } from "@apollo/client";
-import {graphql} from 'react-apollo';
 import { GraphQLSchema } from 'graphql';
 
 const { buildSchema } = require('graphql');
@@ -34,40 +33,7 @@ export const REPOSITORY_FRAGMENT = gql`
     
   }
 `;
-// languages(first: 50, orderBy: {field: SIZE, direction: DESC}) {
-//   totalSize 
-//   edges {
-//     size
-//     node {
-//       name
-//     }
-//   }
-// }
 
-// object(expression: "master:") {
-//   ... on Blob {
-//     oid
-//     byteSize
-//     text
-//   }
-// }
-// object(expression: "HEAD:") {
-//   ... on Tree {
-//     entries {
-//       name
-//       type
-//       mode
-      
-//       object {
-//         ... on Blob {
-//           byteSize
-//           text
-//           isBinary
-//         }
-//       }
-//     }
-//   }
-// }
 const GET_GIT_INFO = gql`
   query($cursor: String) {
     viewer {

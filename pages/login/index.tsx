@@ -11,7 +11,7 @@ function LoginPage({client, setClient, saveData}){
     useEffect(() => {
     })
     const router = useRouter()
-    // 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
+    // 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
     const [ gitToken, setToken ] = useState("")
     const onKeyToken = (event) => {
         if(event.key === 'Enter'){

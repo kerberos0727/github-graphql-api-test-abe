@@ -61,7 +61,7 @@ function Repositories({gitData}): ReactElement{
                     </div>
 
                     <div className="bg-white rounded shadow hover:shadow-md flex-1 flex-col p-7 ml-10 overflow-auto">
-                        <RepoDataTable repoDatas={data.viewer.repositories}/>
+                        <RepoDataTable repoDatas = {data.viewer.repositories.edges}/>
                     </div>
                     <NewRepoModal showModal={showModal} setShowModal={setShowModal}></NewRepoModal>
                 </Fragment>

@@ -67,9 +67,10 @@ const FilterComponent = ({ filterText, onFilter, onClear }) => (
 
 function RepoDataTable ({repoDatas}) {
     console.log("repository datas", repoDatas);
+    // return;
     let rowDatas = [];
     const options: any = { year: 'numeric', month: 'short', day: 'numeric' };
-    repoDatas.edges.map( node => {
+    repoDatas.map( node => {
         let createform = new Date(node.node.createdAt).toLocaleString('en-US', options);
         var updatedDate = new Date(node.node.updatedAt);
         var today       = new Date();
@@ -156,7 +157,7 @@ function RepoDataTable ({repoDatas}) {
           cell: row => {
             let starImg = row.doneStar?f_star:e_Star;
             return (
-              <a className="hover:text-red-500 text-base cursor-pointer" onClick={onStar(row.id, row.doneStar)}><FontAwesomeIcon icon={starImg} className="text-sm"/> {row.stars}</a>
+              <a className="hover:text-red-500 text-base cursor-pointer" onClick={onStar(row.id, row.doneStar)}><FontAwesomeIcon icon={starImg}/> {row.stars}</a>
             );
           },
         },
